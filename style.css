@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&family=Tajawal:wght@500&display=swap');
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inria Sans', sans-serif;
+    background-color: #000; /* Black background for the entire page */
+    color: #f2c30f; /* Golden text color */
+}
+
+/* Header and Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller devices */
+    background-color: #222; /* Dark background for header */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure items wrap when needed */
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #f2c30f; /* Golden color for links */
+}
+
+.navbar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #f2c30f; /* Golden underline for active link */
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    background-color: #111; /* Slightly lighter background for sections */
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive wrapping for smaller screens */
+}
+
+.home-content, .home-img {
+    flex: 1 1 300px; /* Flexible width with minimum size */
+    margin: 10px;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home h1, .home h3 {
+    color: #f2c30f; /* Golden text for headings */
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap; /* Ensures flexibility for smaller screens */
+    gap: 20px;
+    padding: 20px;
+}
+
+.para1, .para2 {
+    flex: 1 1 300px; /* Flexible width with a minimum size */
+    margin: 10px;
+}
+
+/* Work Grid Section */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns based on space */
+    gap: 20px;
+}
+
+.full-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.full-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Page */
+.contact-page {
+    display: flex;
+    flex-wrap: wrap; /* Adjusts layout for smaller screens */
+    justify-content: center;
+    padding: 20px;
+    background-color: #000; /* Black background for contact section */
+    color: #f2c30f; /* Golden text color */
+}
+
+.contact-page form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #222; /* Dark background for form */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #f2c30f; /* Golden border around the form */
+}
+
+.contact-page input, .contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: #333; /* Dark background for inputs */
+    color: #f2c30f; /* Golden text color */
+    border: 1px solid #f2c30f; /* Golden border */
+    border-radius: 4px;
+}
+
+.contact-page input:focus, .contact-page textarea:focus {
+    outline: none;
+    border-color: #f2c30f; /* Golden border on focus */
+}
+/* Social Media Section */
+.social-media {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    font-size: 30px; /* Size of the icons */
+    color: #fff; /* White color for the icons */
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #222; /* Background color of the icon */
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* WhatsApp Icon Styling */
+.social-media .whatsapp {
+    background-color: black; /* WhatsApp Green */
+}
+
+.social-media .whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Instagram Icon Styling */
+.social-media .instagram {
+    background-color: black; /* Instagram Red-Pink */
+}
+
+.social-media .instagram:hover {
+    background-color: #C13584;
+}
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    .home-content, .home-img {
+        text-align: center; /* Centers content */
+    }
+
+    .navbar {
+        justify-content: center; /* Centers navigation links */
+    }
+
+    .about {
+        flex-direction: column; /* Stacks content vertically */
+    }
+
+    .contact-page form {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .home h1, .home h3 {
+        font-size: 18px; /* Scale down fonts */
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .contact-page input, .contact-page textarea {
+        font-size: 14px;
+    }
+}
